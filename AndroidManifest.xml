@@ -7,29 +7,8 @@
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="16" />
-
-    <application
-        android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-        
-        <!-- TODO: AQUI CAMBIO KEY -->
-        <meta-data android:name="com.google.android.maps.v2.API_KEY"
-               android:value="KEY"/> 
-
-        <activity
-            android:name="gdgtenerife.tlp.apis.mapas.MainActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-    </application>
     
-    <!-- Permisos MAPAS -->
+     <!-- Permisos MAPAS -->
     <!-- TODO: AQUI CAMBIO PAQUETES -->
     <permission
     	android:name="gdgtenerife.tlp.apis.mapas.permission.MAPS_RECEIVE" 
@@ -44,5 +23,74 @@
 	<!-- OpenGL ES version 2 para los Mapas -->
 	<uses-feature android:glEsVersion="0x00020000"
               android:required="true"/>
+	
+	<!-- TODO: Explicar GCM -->
+	<!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="gdgtenerife.tlp.apis.mapas.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="gdgtenerife.tlp.apis.mapas.permission.C2D_MESSAGE" />
+
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <!-- TODO: AQUI CAMBIO KEY DE MAPS -->
+        <meta-data android:name="com.google.android.maps.v2.API_KEY"
+               android:value="KEY"/> 
+
+        <activity
+            android:name="gdgtenerife.tlp.apis.mapas.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!--
+	      BroadcastReceiver that will receive intents from GCM
+	      services and handle them to the custom IntentService.
+	
+	      The com.google.android.c2dm.permission.SEND permission is necessary
+	      so only GCM services can send data messages for the app.
+	
+	    -->
+	    <receiver
+	        android:name="com.google.android.gcm.GCMBroadcastReceiver"
+	        android:permission="com.google.android.c2dm.permission.SEND" >
+	        <intent-filter>
+	
+	            <!-- Receives the actual messages. -->
+	            <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+	            <!-- Receives the registration id. -->
+	            <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+				<!-- TODO: Cambiar Paquete -->
+	            <category android:name="gdgtenerife.tlp.apis.mapas.gcm" />
+	        </intent-filter>
+	    </receiver>
+	    <!--
+	      Application-specific subclass of GCMBaseIntentService that will
+	      handle received messages.
+	
+	      By default, it must be named .GCMIntentService, unless the
+	      application uses a custom BroadcastReceiver that redefines its name.
+	
+	    -->
+	    <!-- TODO: Cambiar Paquete -->
+	    <service android:name="gdgtenerife.tlp.apis.mapas.GCMIntentService" />
+    </application>
+    
 </manifest>

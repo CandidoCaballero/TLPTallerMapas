@@ -1,4 +1,6 @@
-package gdgtenerife.tlp.apis.mapas;
+package gdgtenerife.tlp.apis.mapas.ws;
+
+import gdgtenerife.tlp.apis.mapas.adapters.IStandardTaskListener;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,7 +21,7 @@ import org.json.JSONObject;
 
 import android.os.AsyncTask;
 
-class DetailsPlaceOne extends AsyncTask<String, Void, Boolean>{
+public class DetailsPlaceOne extends AsyncTask<String, Void, Boolean>{
 	
 	private IStandardTaskListener listener;
 	public Map<String, Double> coordinates;
@@ -29,7 +31,7 @@ class DetailsPlaceOne extends AsyncTask<String, Void, Boolean>{
 	protected Boolean doInBackground(String... args) {
 		coordinates = new HashMap<String, Double>();
 		try{
-			// TODO: Cambiar la KEY
+			// TODO: Cambiar la KEY de Places
 			String requesturl="https://maps.googleapis.com/maps/api/place/details/json?reference="+URLEncoder.encode(args[0], "UTF-8")+"&sensor=false&key=KEY";
 			DefaultHttpClient client=new DefaultHttpClient();
 			HttpGet req=new HttpGet(requesturl);

@@ -1,4 +1,4 @@
-package gdgtenerife.tlp.apis.mapas;
+package gdgtenerife.tlp.apis.mapas.adapters;
 
 /**
  * Adaptación de erespia2@gmail.com de una interfaz creada por:

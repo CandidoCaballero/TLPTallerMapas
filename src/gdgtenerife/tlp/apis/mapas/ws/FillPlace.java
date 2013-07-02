@@ -1,4 +1,4 @@
-package gdgtenerife.tlp.apis.mapas;
+package gdgtenerife.tlp.apis.mapas.ws;
 
 // TODO: Explicar esto
 
@@ -32,7 +32,7 @@ import org.json.JSONObject;
  * Se ha generado una clave, para poder usar dicha API
  */
 
-class FillPlace extends AsyncTask<String, Void, ArrayList<String>>
+public class FillPlace extends AsyncTask<String, Void, ArrayList<String>>
 {
 	public ArrayAdapter<String> adapter;
 	public Map<String, String> referencesPlace;
@@ -43,7 +43,7 @@ class FillPlace extends AsyncTask<String, Void, ArrayList<String>>
 	// adaptarArg: El Adaptador usado para mostrar las distinas posibilidades de autocompletado en una lista debajo del Campo
 	// textview: El Campo donde se está escrbiendo y que se quiere autocompletar
 	// contextArg: El Contexto de donde se llamó al constructor
-	FillPlace(ArrayAdapter<String> adapterArg, AutoCompleteTextView textview, Context contextArg){
+	public FillPlace(ArrayAdapter<String> adapterArg, AutoCompleteTextView textview, Context contextArg){
 		adapter = adapterArg;
 		autoComplete = textview;
 		context = contextArg;
