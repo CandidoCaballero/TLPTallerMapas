@@ -1,0 +1,11 @@
+...
+p Welcome to #{title}
+form(action="/gcm/send",method="post")
+  p
+    select(name="receptors",multiple="multiple")
+      for recep in receptors
+        option(value="#{recep}")= recep.slice(0,24)+"..."
+  p
+    textarea(name="message")
+  p
+    input(type="Submit")
