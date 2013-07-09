@@ -1,4 +1,5 @@
-# Taller TLP 2k13. Android: Trabajando con APIs
+# Taller TLP 2k13. 
+# Android: Trabajando con APIs
 
 ## Introducción
 
@@ -18,7 +19,7 @@ Este ejemplo se divide en dos partes:
 
 * **El Cliente**: que será la propia **aplicación Android**.
 
-* **El Servidor**: que será una **aplicación web** que se deberá desplegar en un servidor para que realice la comunicación entre la aplicación Android y el servicio GCM de Google. En este ejemplo se realiza la aplicación en *Node.js*+*Express.js* (javascript) ya que en la web se pueden encontrar múltiples ejemplos de uso en PHP y otras tecnologías, por lo que se prefirió elegir tecnologías emergentes para demostrar la versatilidad de uso que proporciona GCM, pudiendo utilizar la tecnología en servidor que más nos guste.
+* **El Servidor**: que será una **aplicación web** que se deberá desplegar en un servidor para que realice la comunicación entre la aplicación Android y el servicio GCM de Google. En este ejemplo se realiza la aplicación en *Node.js* + *Express.js* (javascript) ya que en la web se pueden encontrar múltiples ejemplos de uso en PHP y otras tecnologías, por lo que se prefirió elegir tecnologías emergentes para demostrar la versatilidad de uso que proporciona GCM, pudiendo utilizar la tecnología en servidor que más nos guste.
 
 ## Instrucciones
 
