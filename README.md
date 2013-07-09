@@ -14,11 +14,11 @@ En esta segunda demo, continuaremos trabajando con la aplicación desarrollada e
 La aplicación Android de demostración en cuestión lo que hace es conectarse al servicio web de Google Places a través de consulta por http, para:
 
 * **1**: Sugerirnos a medida que vayamos escribiendo el lugar que podemos estar buscando.
-* **2**: Una vez que seleccionemos el lugar que nos sugiere, recolectar toda la información adicional que Google Place nos proporciona.
+* **2**: Una vez que seleccionemos el lugar que nos sugiere, recolectar toda la información adicional que Google Place nos proporciona, de manera que se crea una transición en el mapa para colocar un *Marker* en el lugar que nos ha sugerido y hemos clickado en el autocompletado.
 
 ## Componentes
 
-Este ejemplo está compuesto por una única Aplicación Android que hará uso de la API para Android de Google Maps en sui versión 2, y la Place API, que no es específica de Android, sino es general ya que se utiliza a través se servicios web. Mediante consulta por http, se obtiene una respuesta en formato JSON o XML. Más info acerca de [Place API] (https://developers.google.com/places/documentation/?hl=es)
+Este ejemplo está compuesto por una única Aplicación Android que hará uso de la API para Android de Google Maps en su versión 2, y la Place API, que no es específica de Android, sino es general ya que se utiliza a través se servicios web. Mediante consulta por http, se obtiene una respuesta en formato JSON o XML. Más info acerca de [Place API] (https://developers.google.com/places/documentation/?hl=es)
 
 ## Instrucciones
 
