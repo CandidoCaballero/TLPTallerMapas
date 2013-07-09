@@ -11,7 +11,7 @@ En esta primera demo, utilizaremos la API v2 de Google Maps para Android que se 
 
 ## Descripción
 
-La aplicación Android de demostración en cuestión lo que hace es mostrar un mapa del mundo en el que se pueda interactuar mediante la incursión de *Markers* (siempre en el mismo ligar =P), cambiar el tipo de Mapa, Realizar animaciones hacia un lugar (predeterminado por defecto), Vista 3D, etc. Estas opciones se podrán ver recurriendo al Menú por defecto de la aplicación.
+La aplicación Android de demostración en cuestión lo que hace es mostrar un mapa del mundo en el que se pueda interactuar mediante la incursión de *Markers* (siempre en el mismo lugar =P), cambiar el tipo de Mapa, Realizar animaciones hacia un lugar (predeterminado por defecto), Vista 3D, etc. Estas opciones se podrán ver recurriendo al Menú por defecto de la aplicación.
 
 ## Componentes
 
